@@ -21,7 +21,7 @@ col3.metric("Recall", f"{metrics['recall']:.4f}")
 col4.metric("F1 Score", f"{metrics['f1']:.4f}")
 
 st.header("🔍 Dataset Preview", divider="red")
-# Show a little bit of data
+
 df = pd.read_csv("netflix_customer_churn.csv")
 st.dataframe(df.head(10))
 
