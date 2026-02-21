@@ -7,9 +7,22 @@ st.set_page_config(page_title="Netflix Churn Strategist", page_icon="🎬", layo
 
 st.markdown("""
 <style>
-    /* Main Background */
+    /* Main Animated Mesh Background */
+    @keyframes bgMovement {
+        0% { background-position: 0% 50%, 0% 50%, 0 0, 0 0; }
+        50% { background-position: 100% 50%, 100% 50%, 0 0, 0 0; }
+        100% { background-position: 0% 50%, 0% 50%, 0 0, 0 0; }
+    }
+    
     .stApp {
-        background-color: #0E1117;
+        background-color: #0A0C10;
+        background-image: 
+            radial-gradient(circle at 15% 50%, rgba(229, 9, 20, 0.08), transparent 35%),
+            radial-gradient(circle at 85% 30%, rgba(48, 54, 61, 0.2), transparent 35%),
+            linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 200% 200%, 200% 200%, 40px 40px, 40px 40px;
+        animation: bgMovement 20s ease-in-out infinite;
     }
     
     /* Form Smooth Load Animation */
@@ -20,17 +33,24 @@ st.markdown("""
     
     /* Form & Input Customization */
     [data-testid="stForm"] {
-        background-color: #161B22;
-        border: 1px solid #30363D;
+        background: linear-gradient(180deg, rgba(22, 27, 34, 0.75), rgba(16, 20, 26, 0.85));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(48, 54, 61, 0.4);
         border-radius: 12px;
         padding: 25px;
         animation: smoothLoad 0.6s ease-out forwards;
         transition: all 0.3s ease;
     }
+    
+    [data-testid="stForm"]:hover {
+        border-color: rgba(229, 9, 20, 0.3);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+    }
 
     div[data-baseweb="input"] > div, div[data-baseweb="select"] > div {
-        background-color: #0D1117 !important;
-        border: 1px solid #30363D !important;
+        background-color: rgba(13, 17, 23, 0.8) !important;
+        border: 1px solid rgba(48, 54, 61, 0.5) !important;
         border-radius: 8px !important;
         transition: all 0.3s ease !important;
     }
@@ -70,17 +90,20 @@ st.markdown("""
     
     /* Metric Cards (Tab 2) */
     .stMetric {
-        background-color: #161B22;
+        background: linear-gradient(145deg, rgba(22, 27, 34, 0.6), rgba(16, 20, 26, 0.8));
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid #30363D;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(48, 54, 61, 0.3);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         transition: all 0.4s ease;
     }
     .stMetric:hover {
         transform: translateY(-6px);
-        box-shadow: 0 12px 24px rgba(229, 9, 20, 0.15);
-        border: 1px solid #E50914;
+        box-shadow: 0 12px 24px rgba(229, 9, 20, 0.12);
+        border: 1px solid rgba(229, 9, 20, 0.6);
+        background: linear-gradient(145deg, rgba(22, 27, 34, 0.8), rgba(28, 14, 18, 0.9));
     }
     
     /* Top Tabs Styling */
@@ -107,7 +130,7 @@ st.markdown("""
     .animated-header {
         animation: dropDown 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         text-align: center;
-        padding: 2rem 0 3.5rem 0;
+        padding: 1.5rem 0 3rem 0;
     }
     
     .animated-result {
@@ -115,20 +138,23 @@ st.markdown("""
         text-align: center;
         padding: 1.5rem;
         border-radius: 12px;
-        margin-top: 5px;
+        margin-top: 15px;
         margin-bottom: 25px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     
     .low-risk {
-        background-color: rgba(46, 160, 67, 0.08);
-        border: 1px solid rgba(46, 160, 67, 0.4);
+        background: linear-gradient(90deg, rgba(46, 160, 67, 0.05), rgba(46, 160, 67, 0.15), rgba(46, 160, 67, 0.05));
+        border: 1px solid rgba(46, 160, 67, 0.3);
+        box-shadow: 0 8px 30px rgba(46, 160, 67, 0.1);
         color: #46c759;
     }
     
     .high-risk {
-        background-color: rgba(229, 9, 20, 0.08);
-        border: 1px solid rgba(229, 9, 20, 0.4);
+        background: linear-gradient(90deg, rgba(229, 9, 20, 0.05), rgba(229, 9, 20, 0.15), rgba(229, 9, 20, 0.05));
+        border: 1px solid rgba(229, 9, 20, 0.3);
+        box-shadow: 0 8px 30px rgba(229, 9, 20, 0.15);
         color: #ff6b6b;
     }
 </style>
