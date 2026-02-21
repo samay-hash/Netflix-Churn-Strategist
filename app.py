@@ -9,7 +9,7 @@ st.markdown("""
 <style>
     /* Main Static Mesh Background */
     .stApp {
-        background-color: #0A0C10;
+        background-color: #0A0C10; /* Dark premium background without red glow */
         background-image: 
             radial-gradient(ellipse at 100% 50%, rgba(48, 54, 61, 0.3) 0%, transparent 50%),
             linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
