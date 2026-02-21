@@ -11,11 +11,10 @@ st.markdown("""
     .stApp {
         background-color: #0A0C10;
         background-image: 
-            radial-gradient(ellipse at 0% 50%, rgba(229, 9, 20, 0.15) 0%, transparent 50%),
             radial-gradient(ellipse at 100% 50%, rgba(48, 54, 61, 0.3) 0%, transparent 50%),
             linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        background-size: 100% 100%, 40px 40px, 40px 40px;
         background-attachment: fixed;
     }
     
