@@ -7,22 +7,16 @@ st.set_page_config(page_title="Netflix Churn Strategist", page_icon="🎬", layo
 
 st.markdown("""
 <style>
-    /* Main Animated Mesh Background */
-    @keyframes bgMovement {
-        0% { background-position: 0% 50%, 0% 50%, 0 0, 0 0; }
-        50% { background-position: 100% 50%, 100% 50%, 0 0, 0 0; }
-        100% { background-position: 0% 50%, 0% 50%, 0 0, 0 0; }
-    }
-    
+    /* Main Static Mesh Background */
     .stApp {
         background-color: #0A0C10;
         background-image: 
-            radial-gradient(circle at 15% 50%, rgba(229, 9, 20, 0.08), transparent 35%),
-            radial-gradient(circle at 85% 30%, rgba(48, 54, 61, 0.2), transparent 35%),
+            radial-gradient(ellipse at 0% 50%, rgba(229, 9, 20, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse at 100% 50%, rgba(48, 54, 61, 0.3) 0%, transparent 50%),
             linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 200% 200%, 200% 200%, 40px 40px, 40px 40px;
-        animation: bgMovement 20s ease-in-out infinite;
+        background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        background-attachment: fixed;
     }
     
     /* Form Smooth Load Animation */
