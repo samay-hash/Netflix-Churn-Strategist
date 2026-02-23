@@ -12,7 +12,7 @@ def train_model():
     X = df.drop("churned", axis=1)
     y = df["churned"]
 
-    X = pd.get_dummies(X, drop_first=True)
+    X = pd.get_dummies(X)
     X_columns = X.columns
 
     X_train, X_test, y_train, y_test = train_test_split(
