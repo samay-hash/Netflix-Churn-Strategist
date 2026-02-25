@@ -1,7 +1,4 @@
 import streamlit as st
-import pandas as pd
-import plotly.express as px
-from model import train_model, predict_new_customer
 
 st.set_page_config(page_title="Netflix Churn Strategist", page_icon="🎬", layout="wide", initial_sidebar_state="collapsed")
 
@@ -225,7 +222,30 @@ st.markdown("""
 def load_and_train_model():
     return train_model()
 
-model, metrics, X_columns = load_and_train_model()
+/* Nav links */
+[data-testid="stSidebarNav"] { padding-top: 0 !important; gap: 2px; }
+[data-testid="stSidebarNav"] a {
+    border-radius: 9px !important;
+    padding: 9px 14px !important;
+    color: #64748B !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    transition: all 0.18s ease !important;
+    margin: 1px 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+}
+[data-testid="stSidebarNav"] a:hover {
+    background: rgba(108,99,255,0.1) !important;
+    color: #A09BFF !important;
+}
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background: rgba(108,99,255,0.18) !important;
+    color: #A09BFF !important;
+    border: 1px solid rgba(108,99,255,0.3) !important;
+}
 
 # --- HERO SECTION ---
 st.markdown("""
