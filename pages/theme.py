@@ -18,7 +18,8 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif !important; }
 
 /* ── Hide default chrome ── */
 #MainMenu, footer { visibility: hidden; }
-.block-container { padding: 2.2rem 2.8rem 4rem !important; max-width: 1240px !important; }
+header[data-testid="stHeader"] { display: none !important; }
+.block-container { padding: 1.5rem 2.8rem 4rem !important; max-width: 1240px !important; }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 5px; }
