@@ -26,8 +26,8 @@ This repository serves as the definitive source code for the Streamlit-based web
 
 - 🔮 **Real-Time Predictive Inference:** A dynamic Streamlit UI accepting 12 distinct customer input vectors to compute real-time churn likelihood.
 - 📊 **Robust Model Validation Dashboard:** Interactive tracking of continuous model deployment metrics (`Accuracy: ~97.9%`, `Precision: ~98.5%`).
-- 📈 **Interactive Plotly Visualizations:** Engaging rendered confusion matrices to map predictive disparities visually.
-- 🎨 **SaaS-Grade UX/UI:** Engineered with micro-interactions, crosshair cursors, and responsive glassmorphic hovering effects utilizing bespoke CSS wrappers.
+- 📈 **Interactive Plotly Visualizations:** Engaging rendered confusion matrices to map predictive disparities visually with deep hover effects.
+- 🎨 **Premium SaaS-Grade UI/UX:** Completely restyled utilizing advanced glassmorphism, smooth scrolling (`scroll-behavior: smooth`), dynamic micro-animations (slide-up fades, pulse glows), and fully highly interactive hover states across forms, buttons, inputs, dataframes, and metric cards.
 - 🔒 **Stateless Architecture:** Highly scalable, session-independent stateless predictions perfectly integrated with Streamlit Cloud environments.
 
 ---
