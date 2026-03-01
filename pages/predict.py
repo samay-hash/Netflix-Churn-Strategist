@@ -45,7 +45,7 @@ with st.form("churn_form"):
     # ── Account ────────────────────────────────────────────────────────────────
     section_label("⚙️  Account Preferences")
     c10, c11, c12 = st.columns(3)
-    monthly_fee        = c10.number_input("Monthly Fee ($)", min_value=0.0, value=12.99)
+    monthly_fee        = c10.number_input("Monthly Fee ($)", min_value=0.0, value=12.99, step=0.01, format="%.2f")
     number_of_profiles = c11.number_input("Active Profiles", min_value=1,  max_value=10, value=2)
     favorite_genre     = c12.selectbox("Favourite Genre",
                                        ['Action', 'Sci-Fi', 'Drama', 'Horror', 'Romance', 'Comedy', 'Documentary'])
