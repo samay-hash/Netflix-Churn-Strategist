@@ -71,22 +71,26 @@ label[data-testid="stWidgetLabel"] p {
 }
 
 /* ── Submit button ── */
-div.stFormSubmitButton > button,
-div.stButton > button[kind="primary"] {
-    background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%) !important;
-    color: #fff !important;
-    border: 1px solid rgba(108,99,255,0.4) !important;
+[data-testid="stFormSubmitButton"] button,
+button[kind="primary"],
+[data-testid="stBaseButton-primary"] {
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(139, 92, 246, 0.5) !important;
     border-radius: 10px !important;
     font-weight: 700 !important; font-size: 0.95rem !important;
-    padding: 0.68rem 2rem !important;
-    box-shadow: 0 4px 18px rgba(108,99,255,0.32) !important;
-    transition: all 0.22s ease !important;
-    width: 100%;
+    padding: 0.65rem 2rem !important;
+    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.35) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100% !important;
 }
-div.stFormSubmitButton > button:hover,
-div.stButton > button[kind="primary"]:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 26px rgba(108,99,255,0.48) !important;
+
+[data-testid="stFormSubmitButton"] button:hover,
+button[kind="primary"]:hover,
+[data-testid="stBaseButton-primary"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(109, 40, 217, 0.45) !important;
+    filter: brightness(1.1);
 }
 
 /* ── Metric cards ── */
@@ -151,6 +155,54 @@ ul[role="listbox"] li:hover,
 ul[role="listbox"] li[aria-selected="true"] {
     background: rgba(108,99,255,0.12) !important;
     color: #A09BFF !important;
+}
+
+/* ── Result Cards ── */
+.result-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.result-card:hover {
+    border-color: rgba(108,99,255,0.3);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.1);
+}
+.result-card.risk { 
+    border-left: 6px solid #FF3333; 
+    background: linear-gradient(90deg, rgba(255,51,51,0.1) 0%, rgba(255,255,255,0.03) 100%); 
+}
+.result-card.safe { 
+    border-left: 6px solid #00FFCC; 
+    background: linear-gradient(90deg, rgba(0,255,204,0.1) 0%, rgba(255,255,255,0.03) 100%); 
+}
+.result-card.info { 
+    border-left: 6px solid #8B5CF6; 
+    background: linear-gradient(90deg, rgba(139,92,246,0.1) 0%, rgba(255,255,255,0.03) 100%); 
+}
+
+.highlight-text {
+    color: #A09BFF;
+    font-weight: 700;
+}
+
+.email-preview {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #E2E8F0;
+    white-space: pre-wrap;
+    max-height: none; /* No scroll */
+    overflow: visible;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 </style>
 """, unsafe_allow_html=True)

@@ -3,7 +3,7 @@ import pandas as pd
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from pages.theme import inject_theme, page_header, section_label
+from views.theme import inject_theme, page_header, section_label
 
 inject_theme()
 

@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from pages.theme import inject_theme, page_header
+from views.theme import inject_theme, page_header
 from logic.ai_agent import get_groq_api_key
 import json
 from streamlit_local_storage import LocalStorage

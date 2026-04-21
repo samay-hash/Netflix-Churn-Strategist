@@ -19,13 +19,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-predict_page = st.Page("pages/predict.py", title="Predict Churn", icon=":material/analytics:")
-home_page = st.Page("pages/home.py", title="Model Dashboard", icon=":material/dashboard:")
-dataset_page = st.Page("pages/dataset.py", title="Dataset Explorer", icon=":material/database:")
+predict_page = st.Page("views/predict.py", title="Predict Churn", icon=":material/analytics:")
+home_page = st.Page("views/home.py", title="Model Dashboard", icon=":material/dashboard:")
+dataset_page = st.Page("views/dataset.py", title="Dataset Explorer", icon=":material/database:")
 
-ai_strategist_page = st.Page("pages/ai_strategist.py", title="AI Strategist", icon=":material/smart_toy:", default=True)
-ai_auditor_page = st.Page("pages/ai_auditor.py", title="AI Data Auditor", icon=":material/manage_search:")
-batch_agent_page = st.Page("pages/batch_agent.py", title="Batch Campaign Agent", icon=":material/rocket_launch:")
+ai_strategist_page = st.Page("views/ai_strategist.py", title="AI Strategist", icon=":material/smart_toy:", default=True)
+ai_auditor_page = st.Page("views/ai_auditor.py", title="AI Data Auditor", icon=":material/manage_search:")
+batch_agent_page = st.Page("views/batch_agent.py", title="Batch Campaign Agent", icon=":material/rocket_launch:")
 
 pg = st.navigation({
     "Agentic AI Studio": [ai_strategist_page, ai_auditor_page, batch_agent_page],

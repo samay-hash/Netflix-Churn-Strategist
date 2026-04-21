@@ -4,7 +4,7 @@ import sys, os
 import time
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from pages.theme import inject_theme, page_header
+from views.theme import inject_theme, page_header
 from logic.churn_model import train_model, predict_new_customer, get_prediction_drivers
 from logic.ai_agent import analyze_churn_and_strategize
 
@@ -31,7 +31,7 @@ if uploaded_file is not None:
     # Let the user pick how many to process to save API limits
     process_limit = st.slider("Max customers to process (Demo limit)", min_value=1, max_value=20, value=5)
     
-    if st.button("Run Batch Campaign Agent", type="primary", icon=":material/rocket_launch:"):
+    if st.button("Run Batch Campaign Agent", type="primary"):
         progress_bar = st.progress(0)
         
         results = []
@@ -87,7 +87,7 @@ if uploaded_file is not None:
         # Simulated Dispatch
         st.markdown("### Execute Marketing Campaign")
         st.info("This will dynamically dispatch the AI-generated promo codes and emails strictly via SendGrid API.")
-        if st.button("Dispatch Final Campaign", type="primary", icon=":material/send:"):
+        if st.button("Dispatch Final Campaign", type="primary"):
             st.toast("Connecting to SendGrid SMTP...")
             time.sleep(1)
             st.toast(f"Dispatching {len(results)} personalized promotional campaigns...")
